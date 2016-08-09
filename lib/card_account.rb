@@ -15,7 +15,6 @@ class CardAccount
       return false
     end
     int_digits = []
-    # assuming that the cc numbers came in all numeric
     cc_num.each_char do |digit|
       int_digits << digit.to_i
     end
@@ -23,7 +22,11 @@ class CardAccount
     for i in ((cc_num.size-1).downto(0))
       # double every other digit from the right
       if (cc_num.size-i) % 2 == 0
-        sum += int_digits[i]*2
+        if int_digits[i] < 5
+          sum += int_digits[i]*2 
+        else
+          sum += (int_digits[i]*2 % 10) + 1
+        end
       else
         sum += int_digits[i]
       end

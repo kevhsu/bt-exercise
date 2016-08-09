@@ -26,13 +26,3 @@ class AccountManager
     end
   end
 end
-
-a = AccountManager.new
-ARGF.each_line do |line|
-  a.process_line(line)
-end
-a.user_accts.each do |k, v|
-  puts v.name
-  puts v.balance
-  puts v.valid
-end
