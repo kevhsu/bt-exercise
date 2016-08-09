@@ -20,6 +20,7 @@ mostly in Ruby so it's familiar.
 I decided to represent each Card Account as its own object by defining the `CardAccount` class
 with the functionality to modify a single account. Each account has its own balance, validity flag,
 cardholder name, and limit stored internally.
+
 All of the accounts are stored by the `AccountManager` within a hash map. AccountManager is also responsible for parsing the commands from the input file and 
 performing the proper action on the right user. 
 I used the in memeory hash over a DB like MySQL for ease of development and because the way the requirements were structured did not imply that it was necessary 
