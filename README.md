@@ -1,12 +1,13 @@
 # bt-exercise
 
 ### Running The Code
-Developed on OS-X but should work on Linux systems as well.
-Install Ruby 2.3.1
+Developed on OS-X but should work on Linux systems as well. This is a pretty standard Ruby installation that uses Rspec for the tests.
+
 (ruby installation instructions for OS X, should be similar to install via apt-get where we use brew)
   - `brew install chruby`
   - `brew install ruby-install`
   - `ruby-install ruby 2.3.1`
+  - `gem install bundler`
   - `cd <directory>/bt-exercise`
   - `bundle install`
   - To run the tests simply type `rspec`
@@ -27,5 +28,6 @@ I used the in memeory hash over a DB like MySQL for ease of development and beca
 to hold onto the data long term nor that potential numbers of users would be so large that they would exceed my laptop's memory space. Switching to using a 
 database to persistently store the users would not be too difficult.
 
+The wrapper script - `bank-runner` - simply utilizes `ARGF` to handle input files and pass individual lines to an instance of AccountManager.
 
 Given some more time I would probably add some end-to-end testing with a larger dataset.
