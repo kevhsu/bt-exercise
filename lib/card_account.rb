@@ -48,4 +48,12 @@ class CardAccount
   def normalize_money(monies)
     (monies[1..-1]).to_i if monies[0] == '$'
   end
+
+  def print_user
+    if @valid
+      puts "#{@name}: #{@balance}"
+    else
+      puts "#{@name}: error"
+    end
+  end
 end
